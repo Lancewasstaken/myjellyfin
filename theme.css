@@ -1,0 +1,1460 @@
+#loginPage {
+  background-image: url('https://raw.githubusercontent.com/stpnwf/ZestyTheme/refs/heads/main/images/login-wallpapers/stylish-gray.png');
+  background-position: center;
+  background-size: cover;
+}
+
+  /* #### login frame #### */
+
+  /*Narrow the login form, size according to display size (bigger on mobile)*/
+  #loginPage .readOnlyContent,
+  #loginPage form {
+    max-width: 22em;
+  }
+
+  #loginPage .padded-left.padded-right.padded-bottom-page {
+    margin-top: 8em;
+  }
+
+  /*Hide "manual" and "forgot" buttons}*/
+  #loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+    display: none;
+  }
+
+  #loginPage .padded-left.padded-right.padded-bottom-page {
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(var(--dark-highlight),.33);
+      backdrop-filter: blur(2px);
+      width: 24em;
+      border-radius: 44px; /* hardcoded */
+  }
+  #loginPage .squareCard {
+      width: 33%;
+  }
+  #loginPage form {
+      padding-top: 4em;
+  }
+
+  #loginPage .sectionTitle{
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-bottom: 1.2em !important;
+  }
+
+  #loginPage .pageTitleWithDefaultLogo {
+    display: none !important;
+  }
+
+/* Green watched indicator */
+.playedIndicator {
+  background: #409843 !important;
+}
+
+/* Rounded left drawer buttons */
+.navMenuOption,
+.navMenuOption:hover,
+.navMenuOption-selected {
+  border-radius: 100px !important;
+  width: 85% !important;
+  margin: auto !important;
+  text-align: center !important;
+  height: 45px !important;
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+}
+.navMenuOption:hover:not(.navMenuOption-selected) {
+  background-color: rgba(44, 44, 44, 0.7);
+}
+
+/* Mobile fixes */
+.layout-mobile .headroom--unpinned {
+  transform: translateY(-50%);
+}
+.layout-mobile .sectionTabs {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+.layout-mobile .emby-button-foreground {
+  top: -2px !important;
+}
+.layout-mobile .skinHeader {
+  transition: .1s !important;
+}
+.layout-mobile .mainDrawer {
+  background: var(--secondary-background-color) !important;
+}
+.layout-mobile .headroom--unpinned {
+  transform: none;
+}
+.layout-mobile .headroom--unpinned:has(.headerTabs.sectionTabs:not(.hide))  {
+  transform: translateY(-50%);
+}
+.layout-mobile .headroom--not-top {
+  background: var(--primary-background-transparent) !important;
+  backdrop-filter: blur(var(--blur)) !important;
+}
+.layout-mobile .headroom--not-top .headerRight {
+  background: none !important;
+}
+.layout-mobile .headroom--top,
+.layout-mobile .headroom--not-top:has(.headerTabs.sectionTabs:not(.hide)) {
+  background: transparent !important;
+  backdrop-filter: none !important;
+}
+.layout-mobile .headroom--top .headerRight ,
+.layout-mobile .headroom--not-top:has(.headerTabs.sectionTabs:not(.hide)) .headerRight {
+  background: var(--primary-background-transparent) !important;
+}
+@media (max-width: 400px) {
+  .layout-mobile .pageTitle:not(.pageTitleWithLogo):not(:empty) {
+      position: absolute !important;
+      margin-left: 60% !important;
+      transform: translate(-50%, 0) !important;
+      top: 60px !important;
+  }
+  .layout-mobile .headerTop:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+      -webkit-align-items: start !important;
+      align-items: start !important;
+  }
+  .layout-mobile .skinHeader:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+      height: 130px !important;
+  }
+  .layout-mobile .skinHeader:has(.pageTitle:not(.pageTitleWithLogo):not(:empty)):has(.sectionTabs:not(.hide)) {
+      height: 160px !important;
+  }
+  .layout-mobile .libraryPage:not(.noSecondaryNavPage) {
+      padding-top: 9.5em !important;
+  }
+  .layout-mobile .headroom--unpinned:has(.headerTabs.sectionTabs:not(.hide)):has(.pageTitle:not(.pageTitleWithLogo):not(:empty)) {
+      transform: translateY(-60%);
+  }
+}
+
+/* Metadata editor fixes */
+.layout-desktop .editPageSidebar {
+  width: 25vw !important;
+}
+.layout-desktop .editPageInnerContent {
+  width: 74vw !important;
+}
+.jstree-default-large .jstree-node {
+  line-height: 35px !important;
+}
+.jstree-default .jstree-wholerow-clicked {
+  background: var(--secondary-accent-color) !important;
+}
+.jstree-wholerow-hovered {
+  background: var(--primary-background-transparent) !important;
+}
+.jstree-children {
+  margin-left: -10px !important;
+}
+#editItemMetadataPage .btnHeaderSave {
+  background: var(--primary-accent-color) !important;
+  border-radius: 100px !important;
+  height: 40px !important;
+  color: white !important;
+}
+
+/* Player modifications */
+.upNextContainer:not(#skipIntro), .toastVisible {
+  backdrop-filter: blur(var(--blur)) !important;
+}
+.upNextContainer:not(#skipIntro) {
+  border-radius: var(--rounded-cards) !important;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.upNextContainer {
+  margin: 4% !important;
+}
+.toastVisible {
+  border-radius: 30px !important;
+  background-color: var(--primary-background-transparent) !important;
+}
+.sliderBubble {
+  border-radius: var(--rounded-cards) !important;
+  background-color: var(--secondary-background-transparent) !important;
+  backdrop-filter: blur(var(--blur)) !important;
+}
+.sliderBubble:not(.osdVolumeSliderContainer .sliderBubble):has(.chapterThumbContainer) {
+  background-color: #ffffff00 !important;
+  top: 25px !important;
+  backdrop-filter: unset !important;
+}
+.mdl-slider-background-flex {
+  height: 10px !important;
+  margin-top: -5px !important;
+  border-radius: 100px !important;
+  background: hsla(0,0%,100%,.2) !important;
+}
+.mdl-slider-background-lower {
+  border-radius: 100px !important;
+  background-color: var(--primary-accent-color) !important;
+}
+/* Moz */
+.mdl-slider::-moz-range-thumb {
+  background: #ffffff00 !important;
+  height: 10px !important;
+  width: 8px !important;
+  border-radius: 2px !important;
+}
+.mdl-slider-hoverthumb:hover::-moz-range-thumb {
+  transform: scaleY(2);
+  background: #fff !important;
+}
+/* Webkit */
+.mdl-slider::-webkit-slider-thumb {
+  background: #ffffff00 !important;
+  height: 10px !important;
+  width: 8px !important;
+  border-radius: 2px !important;
+}
+.mdl-slider-hoverthumb:hover::-webkit-slider-thumb {
+  transform: scaleY(2);
+  background: #fff !important;
+}
+
+.mdl-slider-background-upper {
+  border-top-right-radius: 100px !important;
+  border-bottom-right-radius: 100px !important;
+  background: hsla(0,0%,100%,.2) !important;
+  transform: translateX(-3px) !important;
+}
+.iconOsdProgressInner {
+  background: var(--primary-accent-color) !important;
+}
+
+/*
+    This module will change the Jellyfin logo to a custom one.
+    This allows you to white-label your Jellyfin instance slightly.
+    This can be used as a standalone module.
+*/
+
+:root {
+  --logo-url: url('https://raw.githubusercontent.com/Lancewasstaken/myjellyfin/refs/heads/main/Artboard%201.png?token=GHSAT0AAAAAADBMPL23Q4YNEIVPIUCQBNP2Z7JXV4A')
+}
+
+.pageTitleWithDefaultLogo,
+.spashLogo {
+  background-image: var(--logo-url) !important;
+}
+
+
+
+/* Modify player buttons */
+.material-icons.fast_rewind::before {
+    content: "\e059";
+}
+.material-icons.fast_forward::before {
+    content: "\e057";
+}
+.material-icons.audiotrack::before {
+    content: "\e91f";
+}
+
+
+
+/* Red shutdown button */
+#btnShutdown {
+    background: #AE3739 !important;
+}
+
+/* Music Player */
+.layout-desktop .appfooter {
+  margin-left: 250px !important;
+}
+.layout-desktop .appfooter .nowPlayingBarInfoContainer {
+  margin-left: 10px !important;
+}
+.layout-desktop .volumeOsd {
+  border-radius: var(--rounded-cards) !important;
+  background: var(--secondary-background-transparent) !important;
+}
+.layout-desktop .nameContainer .musicParentName {
+  margin-top: 18px !important;
+  margin-right: 22px !important;
+}
+.layout-desktop .appfooter .nowPlayingBar {
+  margin-top: 20px !important;
+}
+.layout-desktop .appfooter .nowPlayingBar .nowPlayingBarPositionContainer {
+  top: -15px !important;
+}
+
+/*
+    This module will allow you to make the sidebar static, meaning it will not scroll with the rest of the page.
+    This is a simple and effective way to make your Jellyfin instance look more modern.
+    This can be used as a standalone module.
+*/
+
+.layout-desktop .mainDrawer,
+.MuiDrawer-paperAnchorLeft {
+    left: 0 !important;
+    top: 0;
+    width: 250px !important;
+    background-color: var(--theme-sidebar-background-colour) !important;
+    z-index: 100;
+}
+
+.layout-desktop .mainDrawerButton,
+.layout-desktop .headerHomeButton {
+    display: none;
+}
+
+.layout-desktop .libraryPage:not(#editItemMetadataPage),
+.layout-desktop #slides-container {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.layout-desktop .hide-scroll .mainDrawer,
+.layout-desktop .hideMainDrawer .mainDrawer {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Global Variables */
+:root {
+  --bg-color: #18181849;
+  --blur: blur(16px) saturate(180%);
+  --border-color: linear-gradient(45deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 41%, rgba(255, 255, 255, 0.1) 57%, rgba(255, 255, 255, 0.3) 100%);
+  --card-bg: #101010;
+  --indicator-bg: #10101094;
+  --transparent-bg: #10101000;
+}
+
+/* Global Styles */
+html {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elements with transparency and blur effects */
+.mainDrawer,
+.actionSheet,
+select:enabled,
+option {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+
+}
+
+/* Border styling for certain elements */
+.mainDrawer {
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: var(--border-color);
+}
+
+/* Specific styles for .skinHeader */
+.skinHeader {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 5px;
+}
+
+/* Form elements */
+select:enabled,
+option {
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Hidden elements */
+.selectVideoContainer {
+  display: none !important;
+}
+
+/* Style for .skinHeader-withBackground.osdHeader */
+.skinHeader-withBackground.osdHeader {
+  border: 0;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background: linear-gradient(180deg, hsla(0, 0%, 6%, .75), hsla(0, 0%, 6%, 0));
+  color: #eee;
+  height: 7.5em;
+  pointer-events: none;
+  position: relative;
+  transition: opacity .3sease-out;
+  z-index: 1;
+}
+
+/* Overlay elements */
+.cardOverlayContainer,
+.cardScalables,
+.cardPadder {
+  overlay: none;
+}
+
+.cardOverlayContainer {
+  background-color: var(--transparent-bg);
+}
+
+/* List and transition effects */
+.listItem {
+  transition: 0.3s all ease-in-out;
+}
+
+.listItem:hover {
+  background-color: #00a5dc28;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: var(--blur);
+}
+
+/* Card styles */
+.cardBox {
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.itemsContainer > .card > .cardBox:hover {
+  transform: translateY(-5px);
+}
+
+/* Text styles */
+.cardText {
+  font-size: large;
+  padding: 2%;
+}
+
+.cardText-secondary {
+  font-size: small;
+}
+
+/* Margin adjustments for overflow elements */
+.overflowBackdropCard[data-index="0"],
+.overflowPortraitCard[data-index="0"],
+.overflowSquareCard[data-index="0"] {
+  margin-left: 1.5vw;
+}
+
+/* Primary content styling */
+.detailPagePrimaryContainer {
+  background-color: var(--transparent-bg);
+  display: inline-table;
+  left: 5%;
+  padding-left: 5%;
+  z-index: 2;
+}
+
+/* Layout adjustments for desktop */
+.layout-desktop .detailPageContent {
+  padding-left: 5%;
+}
+
+.layout-desktop .detailPagePrimaryContent {
+  width: 45%;
+}
+
+.layout-desktop .detailPageSecondaryContainer {
+  background-color: var(--transparent-bg);
+  margin: 0 0 1.25em 0;
+}
+
+.layout-desktop .itemDetailsGroup {
+  margin-top: 0;
+}
+
+/* Desktop background settings */
+html.preload.layout-desktop {
+  background-color: #181818;
+}
+
+.layout-desktop .detailLogo {
+  background-position: top left;
+  left: 5%;
+}
+
+.layout-desktop .itemBackdrop {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  right: -20%;
+  width: 80vw;
+}
+
+/* Backdrop container */
+.backdropContainer {
+  height: 100vh;
+  left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .backgroundContainer {
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+  margin-top: -65vh;
+}
+
+/* Hide unnecessary elements */
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .itemTags,
+.layout-desktop .itemName.originalTitle {
+  display: none;
+}
+
+.layout-desktop .itemName,
+.layout-mobile .itemName {
+  font-weight: normal;
+}
+
+.layout-desktop a.overview-expand.emby-button {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Status indicators */
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  background-color: var(--indicator-bg) !important;
+  box-shadow: none;
+}
+
+
+/* Hover effects for menu options */
+.actionSheetMenuItem:hover,
+.navMenuOption:hover {
+  background-color: #00a5dc28;
+}
+
+/* Floating action button (FAB) for cards */
+.cardOverlayFab-primary {
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: linear-gradient(rgba(32, 32, 32, 0.1), rgba(32, 32, 32, 0.1)) padding-box,
+              var(--border-color) border-box;
+  background-color: rgba(0, 164, 220, 0.4);
+  backdrop-filter: var(--blur);
+  border: 2px solid transparent;
+}
+
+.cardOverlayFab-primary:hover {
+  background: linear-gradient(rgba(0, 164, 220, 0.1), rgba(0, 164, 220, 0.1)) padding-box,
+              var(--border-color) border-box;
+}
+
+
+.innerCardFooter > .itemProgressBar {
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: var(--blur);
+  background-color: #18181849;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  right: 10px;
+}
+
+
+
+/* Headings */
+h2 {
+  font-weight: 700;
+}
+
+/* Desktop play button styles */
+.layout-desktop .btnPlay {
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+.layout-desktop .btnPlay:hover {
+  background-color: #00a5dc28;
+  transform: translateX(5px);
+}
+
+.layout-desktop .btnPlay::after {
+  color: white;
+  content: attr(title);
+  margin: 0 10px 0 2px;
+}
+
+.layout-desktop .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+/* Media Query for hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .paper-icon-button-light:hover:not(:disabled) {
+    background-color: #00a5dc11;
+    color: #00a5dcec;
+  }
+}
+
+/* Other styles */
+.raised {
+  border-radius: 4em;
+}
+
+#btnShutdown {
+  background-color: #bb4a4a;
+}
+
+.paperList {
+  border-radius: 1em;
+}
+
+
+.sliderContainer {
+  height: 1em;
+}
+
+
+.cardBox:not(.visualCardBox) .cardPadder{
+  background-color: #00000000;
+}
+
+.cardImageContainer {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+/*
+    Jamfin - Another Jellyfin Theme aimed to please the masses.
+    Please note that this theme is still in development and may not be fully functional.
+    This theme is based on the Jellyfin default theme.
+    This theme is licensed under the MIT License.
+*/
+
+:root {
+  /* Colours */
+  --theme-background-colour: #101010;
+  --theme-sidebar-background-colour: #222222;
+  --theme-menu-background-colour: #3a3a3a80;
+  --theme-menu-shadow-colour: #fff3;
+  --theme-base-colour: #696969;
+  --theme-text-colour: #dbdbdb;
+  --theme-restart-colour: #da87287e;
+  --theme-shutdown-colour: #c21c1c9d;
+  --theme-progress-bar-colour: #cfcfcf;
+  --theme-progress-bar-background-colour: #2c2c2c;
+  --theme-progress-bar-transcoding-colour: #eb7e25;
+
+  /* General Appearance */
+  --theme-roundness: .75rem;
+  --theme-blur: 16px;
+}
+
+/* Remove the Default Focus Outline */
+*:focus-visible {
+  outline: none;
+}
+
+/* Change Background Colours */
+.backgroundContainer,
+.mainDrawer,
+.drawer-open,
+.nowPlayingPlaylist,
+.nowPlayingContextMenu,
+html {
+  background-color: var(--theme-background-colour);
+}
+
+/* Re-design the Header */
+
+.layout-desktop [dir="ltr"] .pageTitle {
+  margin-left: 1.2em;
+}
+
+[dir="ltr"] .sidebarHeader {
+  padding-left: 2em;
+  font-weight: bold;
+}
+
+[dir="ltr"] .navMenuOption {
+  padding: .9em 1.2em !important;
+}
+
+.pageTitleWithLogo {
+  height: 50px;
+}
+
+.skinHeader {
+  background-color: transparent;
+}
+
+.layout-desktop .headerLeft,
+.layout-desktop .headerRight {
+  margin-top: 1rem;
+}
+
+.layout-mobile .headerRight {
+  margin: 0 .29em;
+}
+
+.layout-mobile .libraryPage:not(.noSecondaryNavPage) {
+  padding-top: 8.5em !important;
+}
+
+.paper-icon-button-light > div {
+  width: 25px;
+  height: 25px;
+  transform: unset;
+}
+
+.skinHeader.semiTransparent {
+  background-color: unset;
+}
+
+.headerTabs,
+.headerRight,
+.dialog,
+.raised,
+.fab,
+.paper-icon-button-light:not(
+  .headerRight,
+  .headerRight .paper-icon-button-light
+),
+.osdHeader .headerLeft .paper-icon-button-light,
+.detailButton,
+.sliderBubble,
+.MuiDataGrid-root,
+.MuiMenu-list,
+.MuiButton-root,
+.toast.toastVisible,
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus,
+.MuiTabs-centered .MuiTab-root,
+#skipIntro .emby-button,
+.chapterThumbContainer,
+.chapterThumbTextContainer {
+  color: var(--theme-text-colour);
+  border-radius: var(--theme-roundness);
+  box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+  background-color: var(--theme-menu-background-colour);
+  backdrop-filter: blur(var(--theme-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--theme-blur)) !important;
+  -moz-backdrop-filter: blur(var(--theme-blur)) !important;
+  -o-backdrop-filter: blur(var(--theme-blur)) !important;
+  -ms-backdrop-filter: blur(var(--theme-blur)) !important;
+}
+
+.dialogBackdrop {
+  background-color: #111;
+}
+
+.headerTabs .emby-tabs-slider {
+  display: flex;
+  align-items: center;
+}
+
+.headerTabs .emby-tab-button,
+.headerRight .paper-icon-button-light,
+.detailButton,
+.sessionCardButton,
+.guideOptions,
+.MuiTabs-centered .MuiTab-root {
+  padding: .556em !important;
+  margin: 0 .29em !important;
+  border-radius: var(--theme-roundness);
+}
+
+.layout-desktop .headerTabs,
+.layout-desktop .headerLeft,
+.layout-desktop .headerRight,
+.layout-desktop .emby-tabs-slider,
+.layout-desktop .raised {
+  height: 50px;
+}
+
+.layout-mobile .headerTabs,
+.layout-mobile .headerRight,
+.layout-mobile .emby-tabs-slider,
+.layout-mobile .raised {
+  height: 40px;
+}
+
+.layout-desktop .headerTabs {
+  margin-left: 250px;
+}
+
+@media (max-width: 1599px) {
+  .layout-desktop .sectionTabs {
+      width: auto;
+      align-self: center;
+      margin-top: -58px;
+  }
+
+  .layout-desktop .headerRight {
+      margin-right: .8em;
+  }
+
+  .layout-mobile .headerTabs {
+      margin: 20px auto;
+      width: auto;
+  }
+
+  .layout-mobile .pageTitleWithLogo {
+      height: 40px;
+  }
+}
+
+.layout-tv .sectionTabs {
+  width: unset;
+}
+
+@media (min-width: 100em) {
+  .layout-tv .headerTabs {
+      margin-top: unset;
+  }
+
+  .layout-mobile .headerTabs {
+      margin-top: -1.3em;
+  }
+}
+
+@media (max-width: 100em) {
+  .layout-tv .sectionTabs {
+      width: fit-content;
+      align-self: center;
+      font-size: 125%;
+  }
+}
+
+@media (max-width: 50em) {
+  .homeLibraryButton {
+  width: 100% !important;
+  }
+}
+
+/* Main Drawer */
+
+.layout-desktop,
+.touch-menu-la.transition {
+  transition: none;
+}
+
+.layout-mobile .mainDrawer {
+  padding-top: 1.2em;
+}
+
+.layout-desktop .mainDrawer-scrollContainer {
+  margin-top: 100px;
+}
+
+.navMenuOption,
+.navMenuOption-selected,
+.navMenuOption:hover,
+.MuiListItem-root,
+.MuiDrawer-paperAnchorLeft .MuiButtonBase-root {
+  border-radius: var(--theme-roundness) !important;
+  width: 80%;
+  margin: auto !important;
+}
+
+.navMenuOption:hover,
+.listItem:hover,
+.MuiButton-root:hover {
+  background-color: var(--theme-menu-shadow-colour);
+}
+
+.navMenuOption-selected,
+.Mui-selected {
+  background: var(--theme-menu-shadow-colour) !important;
+}
+
+/* Main Cards */
+
+.section0 .sectionTitle {
+  padding-top: 1em !important;
+}
+
+.layout-desktop .section0 .emby-scrollbuttons,
+.layout-desktop .section1 .emby-scrollbuttons {
+  padding-top: unset;
+}
+
+.cardContent:not(.dashboardSection .cardContent),
+.cardPadder:not(.dashboardSection .cardPadder),
+.blurhash-canvas,
+.dialog,
+.itemSelectionPanel {
+  border-radius: var(--theme-roundness) !important;
+  box-shadow: inset 0 1px var(--theme-menu-shadow-colour) !important;
+  transition: 0.2s;
+}
+
+.cardOverlayContainer {
+  border-radius: var(--theme-roundness) !important;
+  box-shadow: inset 0 2px var(--theme-menu-shadow-colour) !important;
+  transition: unset;
+}
+
+.layout-mobile .cardOverlayButton {
+  padding: unset;
+  margin: 5px;
+}
+
+.layout-mobile .cardOverlayButtonIcon {
+  background: unset !important;
+}
+
+.layout-desktop .cardOverlayContainer > .cardOverlayButton-br .cardOverlayButton {
+  padding: unset;
+  margin: 5px;
+}
+
+.defaultCardBackground1,
+.defaultCardBackground2,
+.defaultCardBackground3,
+.defaultCardBackground4,
+.defaultCardBackground5,
+.cardOverlayContainer > .cardOverlayFab-primary {
+  background-color: var(--theme-menu-background-colour);
+  font-size: 110%;
+}
+
+.button-submit:focus,
+.paper-icon-button-light:hover:not(:disabled, .btnDelete),
+.raised:hover,
+.emby-tab-button:hover,
+.detailButton:hover,
+.emby-tab-button.show-focus:focus,
+.paper-icon-button-light.show-focus:focus,
+.emby-button.show-focus:focus,
+.alphaPickerButton-tv:focus,
+#skipIntro .emby-button:hover,
+.multiSelectCheckboxOutline {
+  border-radius: var(--theme-roundness) !important;
+  transform: unset !important;
+  -webkit-transform: unset !important;
+  -moz-transform: unset !important;
+  -o-transform: unset !important;
+  -ms-transform: unset !important;
+  color: var(--theme-text-colour);
+  background-color: var(--theme-menu-shadow-colour) !important;
+}
+
+.layout-tv .itemDetailsGroup .emby-button.show-focus:focus {
+  padding: 5px 10px;
+}
+
+/* User Settings */
+
+.readOnlyContent h2,
+.sectionTitle,
+.dashboardSection h3,
+.MuiListSubheader-root {
+  font-weight: bold;
+}
+
+.listItem-border,
+.itemSelectionPanel {
+  border: unset;
+}
+
+.listItem {
+  padding-left: 1.2em !important;
+}
+
+.listItem:hover,
+.MuiButtonBase-root,
+.MuiButtonBase-root:hover,
+.emby-tab-button,
+progress {
+  border-radius: var(--theme-roundness);
+}
+
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.visualCardBox,
+.emby-select-withcolor,
+.emby-input,
+.emby-textarea {
+  background-color: var(--theme-menu-background-colour);
+  border-radius: var(--theme-roundness);
+  box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+  border: unset;
+  padding: 10px;
+}
+
+.emby-select[disabled] {
+  box-shadow: unset;
+}
+
+.trackSelections .selectContainer .detailTrackSelect {
+  padding: 0 10px;
+}
+
+/* Admin Settings */
+
+#btnRestartServer {
+  box-shadow: inset 0 1px var(--theme-restart-colour) !important;
+}
+
+#btnRestartServer:hover,
+.notifications,
+.MuiChip-filledInfo {
+  color: var(--theme-text-colour) !important;
+  background-color: var(--theme-restart-colour) !important;
+}
+
+#btnShutdown,
+.btnDelete {
+  box-shadow: inset 0 1px var(--theme-shutdown-colour) !important;
+}
+
+#btnShutdown:hover,
+.btnDelete:hover,
+.notification_important,
+.MuiChip-filledError {
+  color: var(--theme-text-colour) !important;
+  background-color: var(--theme-shutdown-colour) !important;
+}
+
+.listItemIcon:not(.listItemIcon-transparent) {
+  border-radius: var(--theme-roundness);
+}
+
+.sessionCardButtons {
+  margin: .29em 0;
+}
+
+.dashboardSection .cardContent {
+  border-top-left-radius: var(--theme-roundness);
+  border-top-right-radius: var(--theme-roundness);
+}
+
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+  border-bottom-left-radius: var(--theme-roundness);
+  border-top-left-radius: var(--theme-roundness);
+}
+
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+  border-bottom-right-radius: var(--theme-roundness);
+  border-top-right-radius: var(--theme-roundness);
+}
+
+.dashboardColumn {
+  flex-shrink: inherit;
+}
+
+/* Base Colours */
+
+.selectLabelFocused,
+.textareaLabelFocused,
+.inputLabelFocused,
+.mdl-slider,
+.metadataSidebarIcon,
+.button-link,
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus,
+#divRunningTasks span,
+.MuiAlert-icon,
+.listItemBodyText span {
+  color: var(--theme-text-colour) !important;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline,
+.listItemIcon:not(
+  .listItemIcon-transparent,
+  .notification_important,
+  .notifications
+),
+.guide-channelHeaderCell:focus,
+.programCell:focus,
+.emby-button.show-focus:focus,
+::selection,
+div[data-role="controlgroup"] a.ui-btn-active,
+.MuiAvatar-root,
+.selectionCommandsPanel {
+  background-color: var(--theme-base-colour) !important;
+}
+
+.emby-checkbox + span + .checkboxOutline,
+.emby-checkbox:checked + span + .checkboxOutline,
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
+.mdl-spinner__layer-1,
+.mdl-spinner__layer-2,
+.mdl-spinner__layer-3,
+.mdl-spinner__layer-4 {
+  border-color: var(--theme-base-colour) !important;
+}
+
+.mdl-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.mdl-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mdl-slider::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mdl-slider::-ms-thumb {
+  width: 0;
+  height: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mdl-slider-background-flex,
+.mdl-slider-background-lower,
+.mdl-slider-background-upper {
+  border-radius: var(--theme-roundness);
+  box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+  height: 10px;
+}
+
+.sliderMarkerContainer {
+  display: none;
+}
+
+.mdl-slider-background-upper {
+  margin-left:  -3px;
+}
+
+.mdl-slider-background-flex-container {
+  top: 5px;
+}
+
+.innerCardFooter .itemProgressBarForeground,
+.playbackProgress > div,
+.mdl-slider-background-lower,
+.iconOsdProgressInner,
+.taskProgressInner,
+progress {
+  background-color: var(--theme-progress-bar-colour) !important;
+}
+
+/* These need to remain separate for browser compatibility */
+progress::-moz-progress-bar {
+  background-color: var(--theme-progress-bar-colour);
+}
+progress::-webkit-progress-bar {
+  background-color: var(--theme-progress-bar-colour);
+}
+progress::-ms-thumb {
+  background-color: var(--theme-progress-bar-colour);
+}
+
+.transcodingProgress > div {
+  background-color: var(--theme-progress-bar-transcoding-colour) !important;
+}
+
+.innerCardFooter .itemProgressBar,
+.backgroundProgress > div,
+.mdl-slider-background-flex,
+.taskProgressOuter,
+progress {
+  background-color: var(--theme-progress-bar-background-colour) !important;
+}
+
+.layout-desktop .dashboardDocument .content-primary:not(.layout-desktop #dashboardPage .content-primary) {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+[dir="ltr"] .formDialogHeaderTitle:first-child {
+  margin-left: unset;
+}
+
+
+
+/* Overlay elements */
+.cardOverlayContainer,
+.cardScalables,
+.cardPadder {
+  overlay: none;
+}
+
+.cardOverlayContainer {
+  background-color: var(--transparent-bg);
+}
+
+/* List and transition effects */
+.listItem {
+  transition: 0.3s all ease-in-out;
+}
+
+.listItem:hover {
+  background-color: #00a5dc28;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: var(--blur);
+}
+
+/* Card styles */
+.cardBox {
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.itemsContainer > .card > .cardBox:hover {
+  transform: translateY(-5px);
+}
+
+/* Text styles */
+.cardText {
+  font-size: large;
+  padding: 2%;
+}
+
+.cardText-secondary {
+  font-size: small;
+}
+
+/* Margin adjustments for overflow elements */
+.overflowBackdropCard[data-index="0"],
+.overflowPortraitCard[data-index="0"],
+.overflowSquareCard[data-index="0"] {
+  margin-left: 1.5vw;
+}
+
+/* Primary content styling */
+.detailPagePrimaryContainer {
+  background-color: var(--transparent-bg);
+  display: inline-table;
+  left: 5%;
+  padding-left: 5%;
+  z-index: 2;
+}
+
+/* Layout adjustments for desktop */
+.layout-desktop .detailPageContent {
+  padding-left: 5%;
+}
+
+.layout-desktop .detailPagePrimaryContent {
+  width: 45%;
+}
+
+.layout-desktop .detailPageSecondaryContainer {
+  background-color: var(--transparent-bg);
+  margin: 0 0 1.25em 0;
+}
+
+.layout-desktop .itemDetailsGroup {
+  margin-top: 0;
+}
+
+/* Desktop background settings */
+html.preload.layout-desktop {
+  background-color: #181818;
+}
+
+.layout-desktop .detailLogo {
+  background-position: top left;
+  left: 5%;
+}
+
+.layout-desktop .itemBackdrop {
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  right: -20%;
+  width: 80vw;
+}
+
+/* Backdrop container */
+.backdropContainer {
+  height: 100vh;
+  left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .backgroundContainer {
+  background: url("https://raw.githubusercontent.com/alexyle/jellyfin-theme/main/glassmorphism/mask.png");
+  background-size: cover;
+  height: 100vh;
+  margin-left: 20%;
+  position: absolute;
+  width: 80vw;
+}
+
+.layout-desktop .detailPageWrapperContainer {
+  margin-top: -65vh;
+}
+
+/* Hide unnecessary elements */
+.layout-desktop .detailImageContainer .card,
+.layout-desktop .itemTags,
+.layout-desktop .itemName.originalTitle {
+  display: none;
+}
+
+.layout-desktop .itemName,
+.layout-mobile .itemName {
+  font-weight: normal;
+}
+
+.layout-desktop a.overview-expand.emby-button {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Status indicators */
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+  backdrop-filter: var(--blur) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  background-color: var(--indicator-bg) !important;
+  box-shadow: none;
+}
+
+
+/* Hover effects for menu options */
+.actionSheetMenuItem:hover,
+.navMenuOption:hover {
+  background-color: #00a5dc28;
+}
+
+/* Floating action button (FAB) for cards */
+.cardOverlayFab-primary {
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: linear-gradient(rgba(32, 32, 32, 0.1), rgba(32, 32, 32, 0.1)) padding-box,
+              var(--border-color) border-box;
+  background-color: rgba(0, 164, 220, 0.4);
+  backdrop-filter: var(--blur);
+  border: 2px solid transparent;
+}
+
+.cardOverlayFab-primary:hover {
+  background: linear-gradient(rgba(0, 164, 220, 0.1), rgba(0, 164, 220, 0.1)) padding-box,
+              var(--border-color) border-box;
+}
+
+/* Progress bars and inner card styles */
+.itemProgressBarForeground {
+  background-color: #00a5dc93;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.innerCardFooter > .itemProgressBar {
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: var(--blur);
+  background-color: #18181849;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  right: 10px;
+}
+
+
+
+/* Headings */
+h2 {
+  font-weight: 700;
+}
+
+/* Desktop play button styles */
+.layout-desktop .btnPlay {
+  background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+              var(--border-color) border-box;
+  border: 1px solid transparent;
+  border-radius: 2em;
+}
+
+.layout-desktop .btnPlay:hover {
+  background-color: #00a5dc28;
+  transform: translateX(5px);
+}
+
+.layout-desktop .btnPlay::after {
+  color: white;
+  content: attr(title);
+  margin: 0 10px 0 2px;
+}
+
+.layout-desktop .btnPlay.detailButton {
+  flex-direction: row;
+}
+
+/* Media Query for hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .paper-icon-button-light:hover:not(:disabled) {
+    background-color: #00a5dc11;
+    color: #00a5dcec;
+  }
+}
+
+/* Other styles */
+.raised {
+  border-radius: 4em;
+}
+
+#btnShutdown {
+  background-color: #bb4a4a;
+}
+
+.paperList {
+  border-radius: 1em;
+}
+
+
+.sliderContainer {
+  height: 1em;
+}
+
+
+.cardBox:not(.visualCardBox) .cardPadder{
+  background-color: #00000000;
+}
+
+.cardImageContainer {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
